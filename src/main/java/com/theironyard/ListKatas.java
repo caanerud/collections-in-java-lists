@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.ArrayList;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -23,6 +25,17 @@ public class ListKatas {
      */
     // todo: create arrayListIndexes() method
 
+
+    public static ArrayList <Integer> arrayListIndexes (int n){
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i = 0; i < n; i++){
+        list.add(i);
+        }
+
+        return list;
+    }
+
+
     /**
      * Write a static method named sumList() that accepts an ArrayList of
      * Doubles and returns the sum of all of the numbers. The length of the list
@@ -34,6 +47,19 @@ public class ListKatas {
      */
     // todo: create sumList() method
 
+    public static double sumList(ArrayList<Double> numbers){
+        double sum = 0;
+        for(int i = 0; i < numbers.size(); i ++){
+        sum = sum + numbers.get(i);
+        }
+        return sum;
+
+    }
+
+
+
+
+
     /**
      * Create a static method named concatenateStrings() that accepts an
      * ArrayList of Strings and concentrates them together. The ArrayList of
@@ -44,6 +70,17 @@ public class ListKatas {
      * @return a concatenation of the provided ArrayList of strings.
      */
     // todo: create concatenateStrings() method
+
+
+    public static String concatenateStrings(ArrayList<String> strings){
+        String sum = "";
+        for(int i = 0; i < strings.size(); i ++){
+            sum = sum + strings.get(i);
+        }
+        return sum;
+
+    }
+
 
     /**
      * Create a static method named reverseListOfStrings() that accepts an
@@ -68,5 +105,12 @@ public class ListKatas {
      * @return an ArrayList of Strings in reverse order
      */
     // todo: create reverseListOfStrings() method
+    public static ArrayList <String> reverseListOfStrings(ArrayList<String> strings){
+        ArrayList<String> total = new ArrayList<>();
+        for(int i = strings.size() - 1; 0 <= i; i--){
+            total.add(strings.get(i));
+        }
 
+        return total;
+    }
 }
